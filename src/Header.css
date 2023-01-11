@@ -30,33 +30,33 @@ img.header_logo {
   height: 22px;
   background-color: #cd9042;
 }
-.header_option{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
+.header_option {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.header_optionLineOne{
-    font-size: 10px;
+.header_optionLineOne {
+  font-size: 10px;
 }
-.header_optionLineTwo{
-    font-size: 14px;
-    font-weight: 800;
+.header_optionLineTwo {
+  font-size: 14px;
+  font-weight: 800;
 }
-.header_optionCart{
-    display: flex;
-    color: white;
-    align-items: center;
-    padding:2px
+.header_optionCart {
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 2px;
 }
-.header_cartCount{
-    margin-left: 5px;
-    margin-right: 10px;
-    font-size: 18px;
-    font-weight: 800;
+.header_cartCount {
+  margin-left: 5px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 800;
 }
-.header_nav{
-    display: flex;
-    justify-content: space-evenly;
+.header_nav {
+  display: flex;
+  justify-content: space-evenly;
 }
