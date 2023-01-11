@@ -11,7 +11,7 @@ export const getCartTotal = (cart) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_USER":
-        return {...state,user:action.user}
+      return { ...state, user: action.user };
     case "Add_to_cart":
       return { ...state, cart: [...state.cart, action.item] };
     case "REMOVE_FROM_CART":

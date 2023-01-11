@@ -7,12 +7,11 @@ import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
 function Header() {
-    const [{cart,user},dispatch] = useStateValue();
-    var  str = user?.email;
-    var userName = str.split("@")
-    const handleAuthentication = () => {
-        if(user) auth.signOut();
-    }
+  const [{ cart, user }, dispatch] = useStateValue();
+  
+  const handleAuthentication = () => {
+    if (user) auth.signOut();
+  };
   return (
     <div className="header">
       <Link to={"/"}>
@@ -29,10 +28,14 @@ function Header() {
       </div>
       <div className="header_nav">
         <Link to={!user && "/login"}>
-        <div onClick={handleAuthentication} className="header_option">
-          <span className="header_optionLineOne">Hello {user ? `${userName[0]}`:"guest"}</span>
-          <span className="header_optionLineTwo">{user ? "Sign out" :"Sign in"}</span>
-        </div>
+          <div onClick={handleAuthentication} className="header_option">
+            <span className="header_optionLineOne">
+              Hello {user ? user?.email : "guest"}
+            </span>
+            <span className="header_optionLineTwo">
+              {user ? "Sign out" : "Sign in"}
+            </span>
+          </div>
         </Link>
         <div className="header_option">
           <span className="header_optionLineOne">Returns</span>
@@ -46,7 +49,9 @@ function Header() {
         <Link to="/checkout">
           <div className="header_optionCart">
             <ShoppingCartIcon />
-            <span className="header_optionLineOne header_cartCount">{cart?.length}</span>
+            <span className="header_optionLineOne header_cartCount">
+              {cart?.length}
+            </span>
           </div>
         </Link>
       </div>
