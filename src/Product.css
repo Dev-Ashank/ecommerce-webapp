@@ -1,4 +1,8 @@
+.product:hover {
+  transform: scale(1.2);
+}
 .product {
+  transition: transform 0.5s;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -35,7 +39,7 @@
   margin: 5px;
   padding: 5px;
 }
-.product_price{
-    margin-top: 8px;
-    align-items: center;
+.product_price {
+  margin-top: 8px;
+  align-items: center;
 }
