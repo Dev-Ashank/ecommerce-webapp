@@ -3,6 +3,7 @@ import "./CheckoutProduct.css";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useStateValue } from "./StateProvider";
 
+
 function CheckoutProduct({ id, title, image, price, rating }) {
   const [{ cart }, dispatch] = useStateValue();
 
@@ -15,6 +16,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
     });
   };
   return (
+
     <div className="checkoutProduct">
       <img className="checkoutProduct_image" src={image} />
       <div className="checkoutProduct_info">
@@ -34,6 +36,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 
       <button onClick={removeFromCart}>Remove from cart</button>
     </div>
+
   );
 }
 

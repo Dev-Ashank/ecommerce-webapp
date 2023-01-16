@@ -28,6 +28,9 @@ const reducer = (state, action) => {
         console.warn(`product not in the cart ${action.title}`);
       }
       return { ...state, cart: newCart };
+
+    case 'EMPTY_CART':
+      return {...state,cart:[]}
     default:
       return state;
   }
